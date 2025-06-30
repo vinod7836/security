@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberGuard Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/babel-standalone@6.26.0/babel.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .smooth-transition { transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        const NavBar = () => (
+            <nav class="bg-blue-900 text-white p-4 sticky top-0 z-50">
+                <div class="container mx-auto flex justify-between items-center">
+                    <h1 class="text-2xl font-bold">CyberGuard Solutions</h1>
+                    <div class="space-x-6">
+                        <a href="#home" class="hover:text-blue-300 smooth-transition">Home</a>
+                        <a href="#services" class="hover:text-blue-300 smooth-transition">Services</a>
+                        <a href="#pricing" class="hover:text-blue-300 smooth-transition">Pricing</a>
+                        <a href="#blog" class="hover:text-blue-300 smooth-transition">Blog</a>
+                        <a href="#contact" class="hover:text-blue-300 smooth-transition">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        );
+
+        const Hero = () => (
+            <section id="home" class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+                <div class="container mx-auto text-center">
+                    <h2 class="text-5xl font-bold mb-4">Secure Your Future</h2>
+                    <p class="text-xl mb-8">Comprehensive cybersecurity solutions for modern businesses</p>
+                    <a href="#contact" class="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 smooth-transition">Get Free Consultation</a>
+                </div>
+            </section>
+        );
+
+        const ServiceCard = ({ title, description, useCase }) => (
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl smooth-transition">
+                <h3 class="text-2xl font-bold mb-2">{title}</h3>
+                <p class="text-gray-600 mb-4">{description}</p>
+                <p class="text-gray-500 italic"><strong>Use Case:</strong> {useCase}</p>
+                <a href={`#${title.toLowerCase().replace(' ', '-')}`} class="text-blue-600 hover:underline">Learn More</a>
+            </div>
+        );
+
+        const Services = () => {
+            const services = [
+                { title: "SAST", description: "Static Application Security Testing to identify vulnerabilities in source code.", useCase: "A fintech company reduced code vulnerabilities by 80% using our SAST solution." },
+                { title: "DAST", description: "Dynamic Application Security Testing for real-time vulnerability detection.", useCase: "An e-commerce platform protected customer data during peak sales." },
+                { title: "PEN Testing", description: "Penetration Testing to simulate real-world attacks.", useCase: "A healthcare provider strengthened defenses against ransomware." },
+                { title: "WAF", description: "Web Application Firewall for real-time threat protection.", useCase: "A media company blocked 10,000+ malicious requests daily." },
+                { title: "ASPM", description: "Application Security Posture Management for comprehensive risk assessment.", useCase: "A SaaS provider streamlined compliance with GDPR." },
+                { title: "CSPM", description: "Cloud Security Posture Management to secure cloud environments.", useCase: "A startup secured its AWS infrastructure in 24 hours." }
+            ];
+
+            return (
+                <section id="services" class="py-16">
+                    <div class="container mx-auto">
+                        <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            {services.map(service => <ServiceCard key={service.title} {...service} />)}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        const Pricing = () => {
+            const [isAnnual, setIsAnnual] = useState(false);
+
+            const plans = [
+                { name: "Basic", monthly: 99, annual: 999, features: ["SAST", "DAST", "Basic Support"] },
+                { name: "Pro", monthly: 299, annual: 2999, features: ["SAST", "DAST", "PEN Testing", "WAF", "Priority Support"] },
+                { name: "Enterprise", monthly: 799, annual: 7999, features: ["All Services", "24/7 Support", "Custom Integrations"] }
+            ];
+
+            return (
+                <section id="pricing" class="py-16 bg-gray-50">
+                    <div class="container mx-auto">
+                        <h2 class="text-4xl font-bold text-center mb-12">Pricing Plans</h2>
+                        <div class="flex justify-center mb-8">
+                            <button onClick={() => setIsAnnual(false)} class={`px-4 py-2 ${!isAnnual ? 'bg-blue-900 text-white' : 'bg-gray-200'}`}>Monthly</button>
+                            <button onClick={() => setIsAnnual(true)} class={`px-4 py-2 ${isAnnual ? 'bg-blue-900 text-white' : 'bg-gray-200'}`}>Annual</button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {plans.map(plan => (
+                                <div key={plan.name} class="bg-white p-6 rounded-lg shadow-lg text-center">
+                                    <h3 class="text-2xl font-bold mb-4">{plan.name}</h3>
+                                    <p class="text-4xl font-bold mb-4">${isAnnual ? plan.annual : plan.monthly}/{isAnnual ? 'year' : 'month'}</p>
+                                    <ul class="text-gray-600 mb-6">
+                                        {plan.features.map(feature => <li key={feature} class="mb-2">{feature}</li>)}
+                                    </ul>
+                                    <button class="bg-blue-900 text-white px-6 py-3 rounded-full hover:bg-blue-800 smooth-transition">Choose Plan</button>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        };
+
+        const Testimonials = () => (
+            <section class="py-16">
+                <div class="container mx-auto">
+                    <h2 class="text-4xl font-bold text-center mb-12">What Our Clients Say</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <p class="text-gray-600 mb-4">"CyberGuard's PEN Testing saved us from a major breach!"</p>
+                            <p class="font-bold">Jane Doe, CTO at FinTech Inc.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <p class="text-gray-600 mb-4">"The WAF solution is a game-changer for our e-commerce platform."</p>
+                            <p class="font-bold">John Smith, CEO at ShopNow</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+
+        const Blog = () => (
+            <section id="blog" class="py-16 bg-gray-50">
+                <div class="container mx-auto">
+                    <h2 class="text-4xl font-bold text-center mb-12">Security Insights & Blog</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-2">Top 5 Cloud Security Threats in 2025</h3>
+                            <p class="text-gray-600 mb-4">Learn about the latest cloud security challenges and how to mitigate them.</p>
+                            <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-2">Why SAST is Critical for DevSecOps</h3>
+                            <p class="text-gray-600 mb-4">Integrate security into your development pipeline with SAST.</p>
+                            <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-lg">
+                            <h3 class="text-xl font-bold mb-2">The Rise of AI-Powered Attacks</h3>
+                            <p class="text-gray-600 mb-4">How to stay ahead of AI-driven cyber threats.</p>
+                            <a href="#" class="text-blue-600 hover:underline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+
+        const ConsultationForm = () => (
+            <section id="contact" class="py-16">
+                <div class="container mx-auto">
+                    <h2 class="text-4xl font-bold text-center mb-12">Book a Free Consultation</h2>
+                    <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Name" class="w-full p-3 border rounded-lg" />
+                            <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg" />
+                            <textarea placeholder="Your Message" class="w-full p-3 border rounded-lg" rows="4"></textarea>
+                            <button class="bg-blue-900 text-white px-6 py-3 rounded-full w-full hover:bg-blue-800 smooth-transition">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+
+        const SignUpForm = () => (
+            <section class="py-16 bg-blue-900 text-white">
+                <div class="container mx-auto text-center">
+                    <h2 class="text-4xl font-bold mb-4">Start Your Free Trial</h2>
+                    <p class="text-xl mb-8">Sign up today and get 14 days free access to our services!</p>
+                    <div class="max-w-md mx-auto">
+                        <div class="space-y-4">
+                            <input type="email" placeholder="Enter your email" class="w-full p-3 rounded-lg text-gray-900" />
+                            <button class="bg-white text-blue-900 px-6 py-3 rounded-full w-full hover:bg-blue-100 smooth-transition">Start Free Trial</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+
+        const Footer = () => (
+            <footer class="bg-gray-800 text-white py-8">
+                <div class="container mx-auto text-center">
+                    <p>&copy; 2025 CyberGuard Solutions. All rights reserved.</p>
+                    <div class="mt-4 space-x-4">
+                        <a href="#" class="hover:text-blue-300">Privacy Policy</a>
+                        <a href="#" class="hover:text-blue-300">Terms of Service</a>
+                    </div>
+                </div>
+            </footer>
+        );
+
+        const App = () => (
+            <div>
+                <NavBar />
+                <Hero />
+                <Services />
+                <Testimonials />
+                <Pricing />
+                <Blog />
+                <ConsultationForm />
+                <SignUpForm />
+                <Footer />
+            </div>
+        );
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
