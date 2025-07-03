@@ -1,290 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberGuard Solutions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#EF4444', // Red
-                        secondary: '#1F2937', // Dark gray (near black)
-                        accent: '#F3F4F6', // Light gray for contrast
-                    },
-                },
-            },
-        }
-    </script>
-</head>
-<body class="bg-gray-900 font-sans text-gray-200">
-    <!-- Navigation -->
-    <nav class="bg-gray-800 shadow sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <h1 class="text-2xl font-bold text-primary">CyberGuard</h1>
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+
+    <title>CyberSec Solutions</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="#" class="logo">
+                            <img src="assets/images/logo.png" alt=" CyberSec Solutions" style="
+                            height: 150px;
+                            top: -60px;
+                            position: relative;
+                        ">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li><a href="#welcome" class="active">HOME</a></li>
+                            <li><a href="sast.html">SAST</a></li>
+                            <li><a href="dast.html">DAST</a></li>
+                            <li><a href="pen-testing.html">PEN TESTING</a></li>
+                            <li><a href="waf.html">WAF</a></li>
+                            <li><a href="blog.html">BLOG</a></li>
+                            <li><a href="index.html#contact-us">CONTACT</a></li>
+                        </ul>
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <div class="welcome-area" id="welcome">
+
+        <!-- ***** Header Text Start ***** -->
+        <div class="header-text">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 col-md-12 col-sm-12">
+                        <h1>Secure Your Digital Future with CyberSec Solutions</h1>
+                        <p>Comprehensive cybersecurity services to protect your business from evolving threats</p>
+                        <a href="#features" class="main-button-slider">Book a Free Consultation</a>
                     </div>
-                    <div class="ml-10 flex items-center space-x-4">
-                        <a href="#services" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                        <a href="#pricing" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
-                        <a href="#blog" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Blog</a>
-                        <a href="#contact" class="text-gray-300 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+        <!-- ***** Header Text End ***** -->
+    </div>
+    <!-- ***** Welcome Area End ***** -->
+
+    <!-- ***** Features Small Start ***** -->
+    <section class="section home-feature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">SAST</h5>
+                                <p>Static Application Security Testing to identify vulnerabilities in your code.</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">DAST</h5>
+                                <p>Dynamic Application Security Testing for real-time threat detection.</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+
+                        <!-- ***** Features Small Item Start ***** -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">Pen Testing</h5>
+                                <p>Simulated cyberattacks to uncover exploitable weaknesses.</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
+                         <!-- ***** Features Small Item Start ***** -->
+                         <div class="col-lg-3 col-md-6 col-sm-6 col-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                            <div class="features-small-item">
+                                <div class="icon">
+                                    <i><img src="assets/images/featured-item-01.png" alt=""></i>
+                                </div>
+                                <h5 class="features-title">WAF</h5>
+                                <p>Web Application Firewall to protect against web-based attacks.</p>
+                            </div>
+                        </div>
+                        <!-- ***** Features Small Item End ***** -->
                     </div>
                 </div>
-                <div class="flex items-center">
-                    <a href="#signup" class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-red-600">Sign Up</a>
-                </div>
             </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="bg-secondary text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Cybersecurity Hero" class="w-full h-64 object-cover rounded-lg mb-6">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Secure Your Future with CyberGuard</h1>
-            <p class="text-lg mb-6">Try full access to all tools for 14 days – no credit card required.</p>
-            <a href="#signup" class="bg-primary text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-red-600">Start Free Trial</a>
-        </div>
     </section>
+    <!-- ***** Features Small End ***** -->
 
-    <!-- Services Section -->
-    <section id="services" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">Our Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- SAST -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="SAST" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">SAST</h3>
-                    <p class="text-gray-300 mb-4">Static Application Security Testing to identify vulnerabilities in your code early.</p>
-                    <p class="text-sm text-gray-400"><strong>Use Case:</strong> Detect SQL injection flaws in your codebase before deployment.</p>
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-top-70 padding-bottom-0" id="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
                 </div>
-                <!-- DAST -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1563986768494-4dee9b6b6779?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="DAST" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">DAST</h3>
-                    <p class="text-gray-300 mb-4">Dynamic Application Security Testing to find runtime vulnerabilities.</p>
-                    <p class="text-sm text-gray-400"><strong>Use Case:</strong> Identify XSS vulnerabilities in live web applications.</p>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">Customer Testimonials</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>"CyberSec's SAST service helped us identify critical vulnerabilities before launch, saving us from potential breaches." <br><strong>Jane Doe, CTO, TechCorp</strong></p>
+                        <p>"The penetration testing team was thorough and professional, giving us confidence in our system's security." <br><strong>John Smith, CEO, SecureApp</strong></p>
+                        <p>"Their WAF solution blocked multiple attacks in real-time, protecting our customer data." <br><strong>Emily Brown, Security Lead, Ecom Solutions</strong></p>
+                    </div>
                 </div>
-                <!-- PEN Testing -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1510519138106-0d2b9a1e8e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="PEN Testing" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">PEN Testing</h3>
-                    <p class="text-gray-300 mb-4">Penetration Testing to simulate real-world attacks and strengthen defenses.</p>
-                    <p class="text-sm text-gray-400"><strong>Use Case:</strong> Test for privilege escalation in enterprise apps.</p>
-                </div>
-                <!-- WAF -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1593642532973-d31b97d1e6b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="WAF" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">WAF</h3>
-                    <p class="text-gray-300 mb-4">Web Application Firewall to protect your apps from malicious traffic.</p>
-                    <p class="text-sm text-gray-400"><strong>Use Case:</strong> Block DDoS attacks on e-commerce platforms.</p>
-                </div>
-                <!-- ASPM -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="ASPM" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">ASPM</h3>
-                    <p class="text-gray-300 mb-4">Application Security Posture Management for comprehensive risk oversight.</p>
-                    <p class="text-sm text-gray-400"><strong>Use Case:</strong> Monitor security compliance across multiple apps.</p>
-                </div>
-                <!-- CSPM -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="CSPM" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">CSPM</h3>
-                    <p class="text-gray-300 mb-4">Cloud Security Posture Management to secure cloud configurations.</p>
-                    <p class="text-sm text-gray-400"><strong>Use Case:</strong> Detect misconfigured S3 buckets in AWS.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hr"></div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- ***** Features Big Item End ***** -->
 
-    <!-- Testimonials Section -->
-    <section class="bg-gray-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">What Our Customers Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-700 p-6 rounded-lg shadow">
-                    <p class="text-gray-300 mb-4">"CyberGuard's SAST helped us catch critical vulnerabilities before launch, saving us from potential breaches."</p>
-                    <p class="text-sm font-semibold text-primary">Jane Doe, CTO at TechCorp</p>
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-bottom-fix">
+                    <div class="left-heading">
+                        <h2 class="section-title">We Secure Your Business Against Cyber Threats</h2>
+                    </div>
+                    <div class="left-text">
+                        <p>Our comprehensive cybersecurity solutions, including SAST, DAST, Penetration Testing, and WAF, protect your applications and data from evolving threats. Partner with us to ensure your business remains secure, compliant, and resilient.</p>
+                    </div>
                 </div>
-                <div class="bg-gray-700 p-6 rounded-lg shadow">
-                    <p class="text-gray-300 mb-4">"The WAF protected our e-commerce site from a massive DDoS attack with zero downtime."</p>
-                    <p class="text-sm font-semibold text-primary">John Smith, CEO at ShopEasy</p>
-                </div>
-                <div class="bg-gray-700 p-6 rounded-lg shadow">
-                    <p class="text-gray-300 mb-4">"Their PEN testing gave us actionable insights to secure our APIs."</p>
-                    <p class="text-sm font-semibold text-primary">Alice Brown, Security Lead at FinTech</p>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center mobile-bottom-fix-big" data-scroll-reveal="enter right move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/right-image.png" class="rounded img-fluid d-block mx-auto" alt="Cybersecurity Dashboard">
                 </div>
             </div>
         </div>
     </section>
+    <!-- ***** Features Big Item End ***** -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">Pricing Plans</h2>
-            <div class="flex justify-center mb-8">
-                <div class="bg-gray-700 rounded-full p-1 flex">
-                    <button id="monthlyBtn" class="bg-gray-800 text-primary px-4 py-2 rounded-full font-medium">Monthly</button>
-                    <button id="annualBtn" class="text-gray-300 px-4 py-2 rounded-full font-medium">Annual</button>
+    <!-- ***** Home Parallax Start ***** -->
+    <section class="mini" id="work-process">
+        <div class="mini-content">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-lg-3 col-lg-6">
+                        <div class="info">
+                            <h1>Our Security Process</h1>
+                            <p>We follow a structured approach to ensure your systems are secure, compliant, and resilient against cyber threats.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <strong>Assess</strong>
+                            <span>Evaluate your systems to identify potential vulnerabilities.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <strong>Scan</strong>
+                            <span>Perform SAST and DAST scans to detect code and runtime issues.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <strong>Test</strong>
+                            <span>Conduct penetration testing to simulate real-world attacks.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <strong>Protect</strong>
+                            <span>Deploy WAF to shield your applications from threats.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <strong>Monitor</strong>
+                            <span>Continuously monitor and provide detailed security reports.</span>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+                        <a href="#" class="mini-box">
+                            <i><img src="assets/images/work-process-item-01.png" alt=""></i>
+                            <strong>Optimize</strong>
+                            <span>Refine security measures based on insights and feedback.</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Starter Plan -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
-                    <h3 class="text-xl font-semibold mb-4 text-primary">Starter</h3>
-                    <p id="starterPrice" class="text-3xl font-bold mb-4 text-white">$0 <span class="text-sm">/ 14-day trial</span></p>
-                    <ul class="text-gray-300 mb-6 space-y-2">
-                        <li>Limited SAST & DAST scans (up to 3 apps)</li>
-                        <li>Basic PEN test report (automated)</li>
-                        <li>Dashboard access</li>
-                        <li>Email support</li>
+        </div>
+    </section>
+    <!-- ***** Home Parallax End ***** -->
+
+    <!-- ***** Testimonials Start ***** -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">What Our Clients Say</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Hear from our clients about how CyberSec Solutions has strengthened their cybersecurity posture with our comprehensive services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>CyberSec's SAST service helped us identify critical vulnerabilities before launch, saving us from potential breaches.</p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Jane Doe</h3>
+                                <span>CTO, TechCorp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>The penetration testing team was thorough and professional, giving us confidence in our system's security.</p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">John Smith</h3>
+                                <span>CEO, SecureApp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="team-item">
+                        <div class="team-content">
+                            <i><img src="assets/images/testimonial-icon.png" alt=""></i>
+                            <p>Their WAF solution blocked multiple attacks in real-time, protecting our customer data.</p>
+                            <div class="user-image">
+                                <img src="http://placehold.it/60x60" alt="">
+                            </div>
+                            <div class="team-info">
+                                <h3 class="user-name">Emily Brown</h3>
+                                <span>Security Lead, Ecom Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials End ***** -->
+
+    <!-- ***** Pricing Plans Start ***** -->
+    <section class="section colored" id="pricing-plans">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Pricing Plans</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Choose a plan tailored to your cybersecurity needs, with flexible monthly or annual billing options.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="pricing-toggle">
+                <button class="active" onclick="showPricing('monthly')">Monthly</button>
+                <button onclick="showPricing('annual')">Annual (Save 20%)</button>
+            </div> -->
+            <div id="monthly-pricing">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                        <div class="pricing-item">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Basic</h3>
+                            </div>
+                            <div class="pricing-body">
+                                <div class="price-wrapper">
+                                    <span class="currency">$</span>
+                                    <span class="price">99</span>
+                                    <span class="period">monthly</span>
+                                </div>
+                                <ul class="list">
+                                    <li class="active">SAST for 1 project</li>
+                                    <li class="active">Basic support</li>
+                                    <li class="active">Monthly reports</li>
+                                    <li>1 user account</li>
+                                    <li>Standard scanning</li>
+                                    <li>Email support</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer">
+                                <a href="#contact" class="main-button">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                        <div class="pricing-item active">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Pro</h3>
+                            </div>
+                            <div class="pricing-body">
+                                <div class="price-wrapper">
+                                    <span class="currency">$</span>
+                                    <span class="price">299</span>
+                                    <span class="period">monthly</span>
+                                </div>
+                                <ul class="list">
+                                    <li class="active">SAST + DAST for 3 projects</li>
+                                    <li class="active">Priority support</li>
+                                    <li class="active">Weekly reports</li>
+                                    <li class="active">3 user accounts</li>
+                                    <li>Advanced scanning</li>
+                                    <li>Email & phone support</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer">
+                                <a href="#contact" class="main-button">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                        <div class="pricing-item">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Enterprise</h3>
+                            </div>
+                            <div class="pricing-body">
+                                <div class="price-wrapper">
+                                    <span class="currency">$</span>
+                                    <span class="price">799</span>
+                                    <span class="period">monthly</span>
+                                </div>
+                                <ul class="list">
+                                    <li class="active">All services for unlimited projects</li>
+                                    <li class="active">24/7 support</li>
+                                    <li class="active">Custom reports</li>
+                                    <li class="active">Unlimited user accounts</li>
+                                    <li class="active">Advanced scanning</li>
+                                    <li class="active">Dedicated account manager</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer">
+                                <a href="#contact" class="main-button">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="annual-pricing" style="display: none;">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.2s">
+                        <div class="pricing-item">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Basic</h3>
+                            </div>
+                            <div class="pricing-body">
+                                <div class="price-wrapper">
+                                    <span class="currency">$</span>
+                                    <span class="price">950</span>
+                                    <span class="period">yearly</span>
+                                </div>
+                                <ul class="list">
+                                    <li class="active">SAST for 1 project</li>
+                                    <li class="active">Basic support</li>
+                                    <li class="active">Monthly reports</li>
+                                    <li>1 user account</li>
+                                    <li>Standard scanning</li>
+                                    <li>Email support</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer">
+                                <a href="#contact" class="main-button">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.4s">
+                        <div class="pricing-item active">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Pro</h3>
+                            </div>
+                            <div class="pricing-body">
+                                <div class="price-wrapper">
+                                    <span class="currency">$</span>
+                                    <span class="price">2870</span>
+                                    <span class="period">yearly</span>
+                                </div>
+                                <ul class="list">
+                                    <li class="active">SAST + DAST for 3 projects</li>
+                                    <li class="active">Priority support</li>
+                                    <li class="active">Weekly reports</li>
+                                    <li class="active">3 user accounts</li>
+                                    <li>Advanced scanning</li>
+                                    <li>Email & phone support</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer">
+                                <a href="#contact" class="main-button">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" data-scroll-reveal="enter bottom move 50px over 0.6s after 0.6s">
+                        <div class="pricing-item">
+                            <div class="pricing-header">
+                                <h3 class="pricing-title">Enterprise</h3>
+                            </div>
+                            <div class="pricing-body">
+                                <div class="price-wrapper">
+                                    <span class="currency">$</span>
+                                    <span class="price">7670</span>
+                                    <span class="period">yearly</span>
+                                </div>
+                                <ul class="list">
+                                    <li class="active">All services for unlimited projects</li>
+                                    <li class="active">24/7 support</li>
+                                    <li class="active">Custom reports</li>
+                                    <li class="active">Unlimited user accounts</li>
+                                    <li class="active">Advanced scanning</li>
+                                    <li class="active">Dedicated account manager</li>
+                                </ul>
+                            </div>
+                            <div class="pricing-footer">
+                                <a href="#contact" class="main-button">Choose Plan</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Pricing Plans End ***** -->
+
+    <!-- ***** Counter Parallax Start ***** -->
+    <section class="counter">
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-bottom">
+                            <strong>126</strong>
+                            <span>Projects</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-top">
+                            <strong>63</strong>
+                            <span>Happy Clients</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item decoration-bottom">
+                            <strong>18</strong>
+                            <span>Awards Wins</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="count-item">
+                            <strong>27</strong>
+                            <span>Countries</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Counter Parallax End ***** -->   
+
+    <!-- ***** Blog Start ***** -->
+    <section class="section" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Blog Entries</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Explore our latest insights on cybersecurity trends, best practices, and how our services protect your business.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-01.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="blog.html">Why SAST is Critical for Secure Development</a>
+                            </h3>
+                            <div class="text">
+                                Learn how Static Application Security Testing identifies vulnerabilities early in the development cycle, ensuring robust and secure code.
+                            </div>
+                            <a href="blog.html" class="main-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-02.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="blog.html">Pen Testing: Simulating Real-World Cyber Threats</a>
+                            </h3>
+                            <div class="text">
+                                Discover how penetration testing uncovers exploitable weaknesses by mimicking real-world cyberattacks, strengthening your defenses.
+                            </div>
+                            <a href="blog.html" class="main-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="blog-post-thumb">
+                        <div class="img">
+                            <img src="assets/images/blog-item-03.png" alt="">
+                        </div>
+                        <div class="blog-content">
+                            <h3>
+                                <a href="blog.html">Protecting Your Apps with WAF</a>
+                            </h3>
+                            <div class="text">
+                                Understand the role of Web Application Firewalls in safeguarding your applications from common web-based attacks like SQL injection and XSS.
+                            </div>
+                            <a href="blog.html" class="main-button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Blog End ***** -->
+
+    <!-- ***** Contact Us Start ***** -->
+    <section class="section colored" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h2 class="section-title">Start Your Free Trial</h2>
+                    </div>
+                </div>
+                <div class="offset-lg-3 col-lg-6">
+                    <div class="center-text">
+                        <p>Sign up for a free trial or book a consultation to secure your business.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h5 class="margin-bottom-30">Get in Touch</h5>
+                    <div class="contact-text">
+                        <p>1234 Cyber Lane<br>Suite 100<br>Secure City, SC 12345</p>
+                        <p>Phone: +1-800-123-4567<br>Email: info@cybersecsolutions.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-6 col-sm-12">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="get">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="email" class="form-control" id="email" placeholder="E-Mail Address" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button">Start Free Trial</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Us End ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
                     </ul>
-                    <a href="#signup" class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-red-600">Start Free Trial</a>
-                </div>
-                <!-- Pro Plan -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow text-center border-2 border-primary">
-                    <h3 class="text-xl font-semibold mb-4 text-primary">Pro</h3>
-                    <p id="proPrice" class="text-3xl font-bold mb-4 text-white">$149 <span class="text-sm">/ month</span></p>
-                    <ul class="text-gray-300 mb-6 space-y-2">
-                        <li>Unlimited SAST & DAST</li>
-                        <li>WAF protection for 3 apps</li>
-                        <li>Manual PEN test (quarterly)</li>
-                        <li>ASPM integration</li>
-                        <li>Ticketing support</li>
-                    </ul>
-                    <a href="#signup" class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-red-600">Get Started</a>
-                </div>
-                <!-- Enterprise Plan -->
-                <div class="bg-gray-800 p-6 rounded-lg shadow text-center">
-                    <h3 class="text-xl font-semibold mb-4 text-primary">Enterprise</h3>
-                    <p class="text-3xl font-bold mb-4 text-white">Custom Quote</p>
-                    <ul class="text-gray-300 mb-6 space-y-2">
-                        <li>All services (SAST, DAST, PEN, WAF, ASPM, CSPM)</li>
-                        <li>24/7 support</li>
-                        <li>Compliance Reports (SOC2, ISO27001)</li>
-                        <li>Dedicated security consultant</li>
-                        <li>Cloud configuration scans (CSPM)</li>
-                        <li>SLA-backed response times</li>
-                    </ul>
-                    <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-red-600">Contact Sales</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Blog/Security Insights Section -->
-    <section id="blog" class="bg-gray-800 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center mb-12 text-white">Security Insights & Blog</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-700 p-6 rounded-lg shadow">
-                    <img src="https://images.unsplash.com/photo-1516321310762-479437144403?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Blog 1" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">Top 5 SAST Best Practices</h3>
-                    <p class="text-gray-300 mb-4">Learn how to integrate SAST into your CI/CD pipeline effectively.</p>
-                    <a href="#" class="text-primary hover:underline">Read More</a>
-                </div>
-                <div class="bg-gray-700 p-6 rounded-lg shadow">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Blog 2" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">Why CSPM is Critical for Cloud</h3>
-                    <p class="text-gray-300 mb-4">Discover the importance of securing your cloud configurations.</p>
-                    <a href="#" class="text-primary hover:underline">Read More</a>
-                </div>
-                <div class="bg-gray-700 p-6 rounded-lg shadow">
-                    <img src="https://images.unsplash.com/photo-1510519138106-0d2b9a1e8e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Blog 3" class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold mb-2 text-primary">PEN Testing Case Study</h3>
-                    <p class="text-gray-300 mb-4">How we helped a fintech secure their APIs from attacks.</p>
-                    <a href="#" class="text-primary hover:underline">Read More</a>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright">Copyright &copy; 2025 CyberSec Solution- Design: HCL Tech</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Consultation Booking Section -->
-    <section id="contact" class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-4 text-white">Book a Free Consultation</h2>
-            <p class="text-lg mb-6 text-gray-300">Schedule a free PEN test consultation – limited time offer.</p>
-            <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow">
-                <div class="space-y-4">
-                    <input type="text" placeholder="Full Name" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-gray-200" required>
-                    <input type="email" placeholder="Email" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-gray-200" required>
-                    <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-gray-200">
-                    <textarea placeholder="Your Message" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-gray-200" rows="4"></textarea>
-                    <button class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-red-600">Schedule Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sign-Up Section -->
-    <section id="signup" class="bg-secondary text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-4">Start Your Free Trial Today</h2>
-            <p class="text-lg mb-6">Free WAF + DAST scan on your first app. No credit card required.</p>
-            <div class="max-w-md mx-auto bg-gray-800 p-6 rounded-lg shadow">
-                <div class="space-y-4">
-                    <input type="text" placeholder="Full Name" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-gray-200" required>
-                    <input type="email" placeholder="Email" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-gray-200" required>
-                    <input type="password" placeholder="Password" class="w-full p-3 border border-gray-600 rounded-md bg-gray-700 text-gray-200" required>
-                    <button class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-red-600">Sign Up Now</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-primary">CyberGuard</h3>
-                    <p class="text-gray-400">Securing your digital future with cutting-edge solutions.</p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-primary">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#services" class="text-gray-400 hover:text-primary">Services</a></li>
-                        <li><a href="#pricing" class="text-gray-400 hover:text-primary">Pricing</a></li>
-                        <li><a href="#blog" class="text-gray-400 hover:text-primary">Blog</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-primary">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4 text-primary">Contact Us</h3>
-                    <p class="text-gray-400">Email: support@cyberguard.com</p>
-                    <p class="text-gray-400">Phone: (123) 456-7890</p>
-                </div>
-            </div>
-            <p class="text-center text-gray-400 mt-8">© 2025 CyberGuard Solutions. All rights reserved.</p>
         </div>
     </footer>
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
 
-    <script>
-        // Pricing toggle logic
-        const monthlyBtn = document.getElementById('monthlyBtn');
-        const annualBtn = document.getElementById('annualBtn');
-        const starterPrice = document.getElementById('starterPrice');
-        const proPrice = document.getElementById('proPrice');
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
-        monthlyBtn.addEventListener('click', () => {
-            monthlyBtn.classList.add('bg-gray-800', 'text-primary');
-            annualBtn.classList.remove('bg-gray-800', 'text-primary');
-            starterPrice.innerHTML = '$0 <span class="text-sm">/ 14-day trial</span>';
-            proPrice.innerHTML = '$149 <span class="text-sm">/ month</span>';
-        });
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script> 
+    
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
 
-        annualBtn.addEventListener('click', () => {
-            annualBtn.classList.add('bg-gray-800', 'text-primary');
-            monthlyBtn.classList.remove('bg-gray-800', 'text-primary');
-            starterPrice.innerHTML = '$0 <span class="text-sm">/ 14-day trial</span>';
-            proPrice.innerHTML = '$134 <span class="text-sm">/ month (billed annually)</span>';
-        });
-    </script>
-</body>
+  </body>
 </html>
