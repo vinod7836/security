@@ -60,7 +60,6 @@ html[xmlns] .clearfix {
 ul, li {
   padding: 0;
   margin: 0;
-  list-style: none;
 }
 
 header, nav, section, article, aside, footer, hgroup {
@@ -1578,4 +1577,82 @@ preloader
   100% {
     opacity: 0;
   }
+}
+.nav {
+    text-transform: uppercase;
+}
+.section.colored {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.left-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.left-text h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.left-text ul {
+    list-style: disc !important;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+    .left-text ul li {
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 0.5rem;
+    }
+
+.main-button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+    .main-button:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }
+
+.testimonial {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .testimonial p {
+        font-style: italic;
+        margin-bottom: 0.5rem;
+    }
+
+    .testimonial strong {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+.hr {
+    border-top: 1px solid #dee2e6;
+    margin: 2rem 0;
 }

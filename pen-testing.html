@@ -15,41 +15,42 @@
         var gk_xlsxFileLookup = {};
         var gk_fileData = {};
         function filledCell(cell) {
-          return cell !== '' && cell != null;
+            return cell !== '' && cell != null;
         }
         function loadFileData(filename) {
-        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
-            try {
-                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
-                var firstSheetName = workbook.SheetNames[0];
-                var worksheet = workbook.Sheets[firstSheetName];
+            if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+                try {
+                    var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                    var firstSheetName = workbook.SheetNames[0];
+                    var worksheet = workbook.Sheets[firstSheetName];
 
-                // Convert sheet to JSON to filter blank rows
-                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
-                var filteredData = jsonData.filter(row => row.some(filledCell));
+                    // Convert sheet to JSON to filter blank rows
+                    var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                    // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                    var filteredData = jsonData.filter(row => row.some(filledCell));
 
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
-                var headerRowIndex = filteredData.findIndex((row, index) =>
-                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
-                );
-                // Fallback
-                if (headerRowIndex === -1 || headerRowIndex > 25) {
-                  headerRowIndex = 0;
+                    // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                    var headerRowIndex = filteredData.findIndex((row, index) =>
+                        row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                    );
+                    // Fallback
+                    if (headerRowIndex === -1 || headerRowIndex > 25) {
+                        headerRowIndex = 0;
+                    }
+
+                    // Convert filtered JSON back to CSV
+                    var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                    csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                    return csv;
+                } catch (e) {
+                    console.error(e);
+                    return "";
                 }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
-                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
-                return csv;
-            } catch (e) {
-                console.error(e);
-                return "";
             }
+            return gk_fileData[filename] || "";
         }
-        return gk_fileData[filename] || "";
-        }
-        </script>
+    </script>
+    
 </head>
 <body>
     <div id="preloader">
@@ -59,7 +60,6 @@
             <div></div>
         </div>
     </div>
-    <hr />
     <header class="header-area header-sticky">
         <div class="container">
             <div class="row">
@@ -74,10 +74,10 @@
                         </a>
                         <ul class="nav">
                             <li><a href="index.html">Home</a></li>
+                            <li><a href="threat-modeling.html">Threat Modeling</a></li>
                             <li><a href="sast.html">SAST</a></li>
                             <li><a href="dast.html">DAST</a></li>
                             <li><a href="pen-testing.html" class="active">PEN TESTING</a></li>
-                            <li><a href="waf.html">WAF</a></li>
                             <li><a href="blog.html">Blog</a></li>
                             <li><a href="index.html#contact-us">CONTACT</a></li>
                         </ul>
@@ -89,21 +89,33 @@
             </div>
         </div>
     </header>
+    <br />  <br />
     <section class="section colored" id="features">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-12 col-sm-12 align-self-center" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="Penetration Testing Simulation">
                 </div>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 align-self-center mobile-top-fix">
+                <div class="col-lg-1 d-none d-lg-block"></div>
+                <div class="col-lg-6 col-md-12 col-sm-12 mobile-top-fix">
                     <div class="left-heading">
                         <h2 class="section-title">Penetration Testing</h2>
                     </div>
                     <div class="left-text">
-                        <p>Our penetration testing services simulate real-world cyberattacks to identify and exploit vulnerabilities in your systems.</p>
+                        <p>Our penetration testing services simulate real-world cyberattacks to identify, exploit, and remediate vulnerabilities in your systems, networks, and applications, ensuring robust protection against potential breaches.</p>
+                        <h5>Key Benefits</h5>
+                        <ul>
+                            <li>Uncovers hidden vulnerabilities before attackers do.</li>
+                            <li>Provides actionable remediation steps to strengthen security.</li>
+                            <li>Enhances compliance with standards like PCI DSS and ISO 27001.</li>
+                        </ul>
                         <h5>Use Cases</h5>
-                        <p>- Assessing the security of your network infrastructure.<br>- Testing employee susceptibility to social engineering attacks.<br>- Validating the effectiveness of your security controls.</p>
+                        <ul>
+                            <li>Assessing the security of your network infrastructure against external threats.</li>
+                            <li>Testing employee susceptibility to social engineering attacks like phishing.</li>
+                            <li>Validating the effectiveness of existing security controls and configurations.</li>
+                            <li>Simulating advanced persistent threats (APTs) to test incident response capabilities.</li>
+                        </ul>
                         <a href="index.html#contact" class="main-button">Book a Free Consultation</a>
                     </div>
                 </div>
