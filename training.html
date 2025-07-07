@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="CyberSec Solutions Training Program for college graduates in Threat Modeling, SAST, DAST, and Penetration Testing">
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <title>Blog - CyberSec Solutions</title>
+    <title>Training Program - CyberSec Solutions</title>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -23,23 +23,15 @@
                 var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
                 var firstSheetName = workbook.SheetNames[0];
                 var worksheet = workbook.Sheets[firstSheetName];
-
-                // Convert sheet to JSON to filter blank rows
                 var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
-                // Filter out blank rows (rows where all cells are empty, null, or undefined)
                 var filteredData = jsonData.filter(row => row.some(filledCell));
-
-                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
                 var headerRowIndex = filteredData.findIndex((row, index) =>
                   row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
                 );
-                // Fallback
                 if (headerRowIndex === -1 || headerRowIndex > 25) {
                   headerRowIndex = 0;
                 }
-
-                // Convert filtered JSON back to CSV
-                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
                 csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
                 return csv;
             } catch (e) {
@@ -49,7 +41,7 @@
         }
         return gk_fileData[filename] || "";
         }
-        </script>
+    </script>
 </head>
 <body>
     <div id="preloader">
@@ -66,7 +58,7 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <a href="#" class="logo">
-                            <img src="assets/images/logo.png" alt=" CyberSec Solutions" style="
+                            <img src="assets/images/logo.png" alt="CyberSec Solutions" style="
                             height: 150px;
                             top: -60px;
                             position: relative;
@@ -78,8 +70,8 @@
                             <li><a href="sast.html">SAST</a></li>
                             <li><a href="dast.html">DAST</a></li>
                             <li><a href="pen-testing.html">PEN TESTING</a></li>
-                            <li><a href="training.html">TRAINING</a></li>
-                            <li><a href="blog.html" class="active">BLOG</a></li>
+                            <li><a href="training.html" class="active">TRAINING</a></li>
+                            <li><a href="blog.html">BLOG</a></li>
                             <li><a href="index.html#contact-us">CONTACT</a></li>
                         </ul>
                         <a class='menu-trigger'>
@@ -91,44 +83,44 @@
         </div>
     </header>
     <br />
-    <section class="section colored" id="features">
+    <section class="section colored" id="training">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5 col-md-12 col-sm-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                    <img src="assets/images/left-image.png" class="rounded img-fluid d-block mx-auto" alt="App">
-                </div>
-                <div class="col-lg-1 d-none d-lg-block"></div>
-                <div class="col-lg-6 col-md-12 col-sm-12 mobile-top-fix">
+                <div class="col-12">
                     <div class="left-heading">
-                        <h2 class="section-title">Security Insights & Blog</h2>
+                        <h2 class="section-title">Cybersecurity Training Program for College Graduates</h2>
                     </div>
                     <div class="left-text">
-                        <p>Stay informed with our expert insights on cybersecurity trends, best practices, and strategies to protect your applications and infrastructure.</p>
-                        <div class="blog-entry">
-                            <h5>Top 5 SAST Best Practices for Secure Coding</h5>
-                            <p>Learn how to integrate Static Application Security Testing (SAST) into your development pipeline to catch vulnerabilities early, improve code quality, and ensure secure software development.</p>
-                            <a href="#" class="main-button">Read More</a>
-                        </div>
-                        <div class="blog-entry">
-                            <h5>Why DAST is Essential for Modern Web Applications</h5>
-                            <p>Explore the benefits of Dynamic Application Security Testing (DAST) in identifying runtime vulnerabilities, securing web applications, and maintaining robust security in production environments.</p>
-                            <a href="#" class="main-button">Read More</a>
-                        </div>
-                        <div class="blog-entry">
-                            <h5>Penetration Testing: A Must-Have for Compliance</h5>
-                            <p>Understand how penetration testing helps meet regulatory requirements, strengthens your security posture, and protects against real-world cyber threats.</p>
-                            <a href="#" class="main-button">Read More</a>
-                        </div>
-                        <div class="blog-entry">
-                            <h5>Threat Modeling: Building Security from the Ground Up</h5>
-                            <p>Discover how threat modeling identifies risks early in the development process, enabling proactive security measures to safeguard your applications and systems.</p>
-                            <a href="#" class="main-button">Read More</a>
-                        </div>
-                        <div class="blog-entry">
-                            <h5>How to Achieve Compliance with GDPR and HIPAA</h5>
-                            <p>Learn practical steps to ensure your organization meets GDPR, HIPAA, and other regulatory standards through effective security testing and risk management strategies.</p>
-                            <a href="#" class="main-button">Read More</a>
-                        </div>
+                        <p>Our comprehensive training program equips college graduates with the skills needed to excel in cybersecurity, focusing on Threat Modeling, Static Application Security Testing (SAST), Dynamic Application Security Testing (DAST), and Penetration Testing. This hands-on program combines theoretical knowledge with practical exercises to prepare you for real-world challenges.</p>
+                        <h5>Program Overview</h5>
+                        <ul>
+                            <li><strong>Duration:</strong> 12 weeks, part-time (20 hours/week)</li>
+                            <li><strong>Format:</strong> Hybrid (Online + In-person workshops)</li>
+                            <li><strong>Target Audience:</strong> Recent college graduates with a background in computer science, IT, or related fields</li>
+                            <li><strong>Certification:</strong> CyberSec Solutions Cybersecurity Professional Certificate upon completion</li>
+                        </ul>
+                        <h5>Course Modules</h5>
+                        <ul>
+                            <li><strong>Threat Modeling (3 weeks):</strong> Learn to identify, analyze, and mitigate potential threats in software systems using STRIDE and DREAD methodologies.</li>
+                            <li><strong>SAST (3 weeks):</strong> Master static code analysis to detect vulnerabilities in source code using tools like SonarQube and Checkmarx.</li>
+                            <li><strong>DAST (3 weeks):</strong> Gain expertise in testing running applications for vulnerabilities using tools like OWASP ZAP and Burp Suite.</li>
+                            <li><strong>Penetration Testing (3 weeks):</strong> Develop skills to simulate real-world attacks, identify weaknesses, and report findings using Metasploit and Kali Linux.</li>
+                        </ul>
+                        <h5>Learning Outcomes</h5>
+                        <ul>
+                            <li>Understand and apply cybersecurity principles to secure software applications.</li>
+                            <li>Perform vulnerability assessments using industry-standard tools.</li>
+                            <li>Develop actionable reports to address security weaknesses.</li>
+                            <li>Prepare for certifications like CEH, OSCP, or CompTIA Security+.</li>
+                        </ul>
+                        <h5>Why Choose Our Program?</h5>
+                        <ul>
+                            <li>Hands-on labs and real-world case studies.</li>
+                            <li>Mentorship from experienced cybersecurity professionals.</li>
+                            <li>Access to cutting-edge tools and resources.</li>
+                            <li>Career guidance and job placement support.</li>
+                        </ul>
+                        <a href="index.html#contact" class="main-button">Enroll Now</a>
                     </div>
                 </div>
             </div>
@@ -149,7 +141,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="copyright">Copyright &copy; 2025 CyberSec Solution- Design: HCL Tech</p>
+                    <p class="copyright">Copyright © 2025 CyberSec Solutions - Design: HCL Tech</p>
                 </div>
             </div>
         </div>
